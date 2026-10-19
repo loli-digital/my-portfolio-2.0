@@ -1,9 +1,8 @@
-import "./App.css";
-import { Navbar, Footer } from "@/components";
+import { Footer } from "@/components";
+import "./styles/main.scss";
 
 function App() {
   return <>
-    <Navbar />
     <Footer />
   </>;
 }
