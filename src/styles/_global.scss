@@ -1,0 +1,30 @@
+@use "./variables" as *;
+
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(100% - 2rem, $container-max-width);
+  margin-inline: auto;
+}
+
+::selection {
+  background-color: $color-accent;
+  color: $color-bg;
+}
