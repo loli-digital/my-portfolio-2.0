@@ -1,28 +1,25 @@
 @use "../../styles/variables" as *;
 
-.footer__container{
-    padding: 2rem;
-    text-align: center;
-    color: $color-text;
+.footer__container {
+  padding: 2rem;
+  text-align: center;
+  color: $color-text;
 
-    p:first-child{
-        margin-bottom: .5rem;
+  span {
+    &:not(:first-of-type) {
+      font-weight: bold;
     }
+  }
 
-    span{
-        font-weight: bold;
-    }
+  &--react {
+    color: #61dbfb;
+  }
 
-    .footer__container--react{
-        color: #61DBFB;
-    }
+  &--typescript {
+    color: #3178c6;
+  }
 
-    .footer__container--typescript{
-        color: #3178C6;
-    }
-
-    .footer__container--sass{
-        color: #cc6699;
-    }
-    
+  &--sass {
+    color: #cc6699;
+  }
 }
