@@ -1,26 +1,30 @@
 @use "../../styles/variables" as *;
 
-.footer__container {
+.footer {
   padding: 2rem;
   text-align: center;
   color: $color-text;
-  font-size: $font-size-sm;
+  font-family: 'JetBrainsMono';
 
-  span {
+  &__text {
+    font-size: $font-size-sm;
+  }
+
+  &__tech {
     &:not(:first-of-type) {
-      font-weight: bold;
+      font-weight: 900;
     }
-  }
+    
+    &--react {
+      color: #61dbfb;
+    }
 
-  &--react {
-    color: #61dbfb;
-  }
+    &--typescript {
+      color: #3178c6;
+    }
 
-  &--typescript {
-    color: #3178c6;
-  }
-
-  &--sass {
-    color: #cc6699;
+    &--sass {
+      color: #cc6699;
+    }
   }
 }
