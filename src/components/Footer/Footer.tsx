@@ -2,12 +2,15 @@ import "./Footer.scss";
 
 export function Footer() {
   return (
-    <footer className="footer__container">
-      <p>
+    <footer className="footer">
+      <p className="footer__text">
         &copy; <span>{new Date().getFullYear()}</span> Loli Guerrero ·
-        Desarrollado en <span className="footer__container--react">React</span>,{" "}
-        <span className="footer__container--typescript">TypeScript</span> y{" "}
-        <span className="footer__container--sass">SaSS</span>
+        Desarrollado en{" "}
+        <span className="footer__tech footer__tech--react">React</span>,
+        <span className="footer__tech footer__tech--typescript">
+          TypeScript
+        </span>{" "}
+        y <span className="footer__tech footer__tech--sass">SaSS</span>
       </p>
     </footer>
   );
