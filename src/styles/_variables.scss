@@ -1,19 +1,35 @@
 // Colors
-$color-bg: #0F1222;
-$color-surface: #1C1F2F;
-$color-surface-menu:#080B1A;
+$color-bg: #0f1222;
+$color-surface: #1c1f2f;
+$color-surface-menu: #080b1a;
 $color-surface-card: #262939;
 $color-border: #3a3e49;
 
-$color-text-heading: #E0E1F7;
-$color-text-subtle: #FFADE4;
-$color-text: #DCBECF;
-$color-text-muted: #A38999;
-$color-accent: #FF4EDB;
+$color-text-heading: #e0e1f7;
+$color-text-subtle: #ffade4;
+$color-text: #dcbecf;
+$color-text-muted: #a38999;
+$color-accent: #ff4edb;
+
+$color-icon-primary: #492952;
+$color-icon-primary-content: #ff4edb;
+$color-icon-secondary: #220b4d;
+$color-icon-secondary-content: #d4bbff;
+$color-icon-tertiary: #144957;
+$color-icon-tertiary-content: #01dbe9;
+
+$color-btn-primary: #ff4edb;
+$color-btn-primary-border: #ffade4;
+$color-btn-primary-content: #fff;
+$color-btn-primary-hover: #d4bbff;
+
+// Gradient
+$gradient-btn-primary: linear-gradient(135deg, #ff4edb, #220b4d);
 
 // Typography
 $font-primary: "Inter", sans-serif;
 
+$font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
 $font-size-base: 1rem;
 $font-size-lg: 1.25rem;
@@ -28,5 +44,7 @@ $space-xl: 4rem;
 
 // Layout
 $container-max-width: 1200px;
+$radius-xs: 4px;
+$radius-s: 8px;
 $radius-md: 12px;
 $radius-lg: 20px;
