@@ -4,17 +4,17 @@
   padding: 2rem;
   text-align: center;
   color: $color-text;
-  font-family: 'JetBrainsMono';
+  font-family: "JetBrains Mono";
 
   &__text {
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
   }
 
   &__tech {
     &:not(:first-of-type) {
       font-weight: 900;
     }
-    
+
     &--react {
       color: #61dbfb;
     }
