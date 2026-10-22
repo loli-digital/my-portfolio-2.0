@@ -30,11 +30,21 @@ export function Navbar() {
       {/* Navbar */}
       <nav className="navbar">
         <ul className="navbar__menu">
-          <li className="navbar__item">Inicio</li>
-          <li className="navbar__item">Proyectos</li>
-          <li className="navbar__item">Habilidades</li>
-          <li className="navbar__item">Sobre mí</li>
-          <li className="navbar__item">Contacto</li>
+          <li className="navbar__item">
+            <a href="#">Inicio</a>
+          </li>
+          <li className="navbar__item">
+            <a href="#projects">Proyectos</a>
+          </li>
+          <li className="navbar__item">
+            <a href="#habilities">Habilidades</a>
+          </li>
+          <li className="navbar__item">
+            <a href="#about-me">Sobre mí</a>
+          </li>
+          <li className="navbar__item">
+            <a href="#contact">Contacto</a>
+          </li>
         </ul>
       </nav>
       {/* Botón para descargar CV */}
@@ -69,19 +79,19 @@ export function Navbar() {
           {/* Mobile menu */}
           <ul className="navbar__menu">
             <li className="navbar__item" role="menuitem" onClick={closeMenu}>
-              Inicio
+              <a href="#">Inicio</a>
             </li>
             <li className="navbar__item" role="menuitem" onClick={closeMenu}>
-              Proyectos
+              <a href="#projects">Proyectos</a>
             </li>
             <li className="navbar__item" role="menuitem" onClick={closeMenu}>
-              Habilidades
+              <a href="#habilities">Habilidades</a>
             </li>
             <li className="navbar__item" role="menuitem" onClick={closeMenu}>
-              Sobre mí
+              <a href="#about-me">Sobre mí</a>
             </li>
             <li className="navbar__item" role="menuitem" onClick={closeMenu}>
-              Contacto
+              <a href="#contact">Contacto</a>
             </li>
           </ul>
           {/* Botón para descargar CV */}
