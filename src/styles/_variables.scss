@@ -2,6 +2,7 @@
 $color-bg: #0f1222;
 $color-surface: #1c1f2f;
 $color-surface-menu: #080b1a;
+$color-surface-menu-navbar: rgba(8, 11, 26, 0.9);
 $color-surface-card: #262939;
 $color-border: #3a3e49;
 
@@ -42,9 +43,15 @@ $space-md: 1rem;
 $space-lg: 2rem;
 $space-xl: 4rem;
 
-// Layout
+// Border-radius
 $container-max-width: 1200px;
 $radius-xs: 4px;
 $radius-s: 8px;
 $radius-md: 12px;
 $radius-lg: 20px;
+
+//Breakpoints
+$bp-mobile-xl: 640px;
+$bp-tablet: 768px;
+$bp-laptop: 1024px;
+$bp-desktop: 1280px;
