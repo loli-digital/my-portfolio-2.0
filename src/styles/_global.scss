@@ -1,5 +1,9 @@
 @use "./variables" as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $color-bg;
   color: $color-text;
@@ -17,6 +21,10 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+li{
+  list-style-type: none;
 }
 
 .container {
