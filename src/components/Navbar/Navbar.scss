@@ -1,13 +1,18 @@
 @use "../../styles/variables" as *;
 
-.navbar {
+.header {
+  width: 100%;
   padding: $space-md;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  color: $color-text;
-  font-family: "JetBrains Mono";
+  background-color: $color-surface-menu-navbar;
+  position: relative;
+
+  @media (min-width: $bp-desktop) {
+    padding: $space-md $space-xl;
+  }
 
   /*Brand*/
   &__brand {
@@ -23,45 +28,172 @@
       background-color: $color-icon-secondary;
       color: $color-icon-secondary-content;
       font-size: $font-size-xs;
+      font-family: "JetBrains Mono";
       border-radius: $radius-xs;
       border: 1px solid $color-icon-secondary-content;
       text-transform: uppercase;
     }
   }
 
-  /* Menu*/
-  &__menu {
+  /*Navbar Mobile*/
+  &__mobile-menu {
+    width: 100%;
+    padding: $space-lg $space-md;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: $space-xl;
+    gap: $space-sm;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    padding: $space-md;
+    background-color: $color-surface-menu-navbar;
+    border-bottom: 2px solid $color-surface;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: slideDown 0.3s ease-in-out forwards;
+
+    @keyframes slideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (min-width: $bp-laptop) {
+      display: none;
+    }
+
+    .navbar__menu {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: $space-xs;
+      border: 0;
+    }
+
+    .navbar__item {
+      padding: $space-md;
+      font-size: $font-size-lg;
+      color: $color-text;
+      cursor: pointer;
+      border-radius: $radius-s;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $color-surface-card;
+        color: $color-text-subtle;
+      }
+    }
   }
 
-  &__item {
-    color: $color-text;
-    list-style-type: none;
-    cursor: pointer;
+  /*Botón hamburguesa*/
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-btn-primary;
+    color: $color-btn-primary-content;
+    border: 2px solid $color-btn-primary-border;
+    border-radius: $radius-xs;
+
+    @media (min-width: $bp-laptop) {
+      display: none;
+    }
   }
 
   /*Button download CV*/
   &__cv-btn {
     padding: $space-sm;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-
+    display: none;
     border-radius: $radius-s;
     border: 2px solid $color-btn-primary-border;
     font-size: $font-size-sm;
     font-family: "Inter";
     color: $color-btn-primary-content;
     background: $gradient-btn-primary;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    transition: border-color .3s ease-in-out;
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition:
+      border-color 0.3s ease-in-out,
+      box-shadow 0.3s ease;
 
-    &:hover{
-        border-color: $color-btn-primary-hover;
+    &:hover {
+      border-color: $color-btn-primary-hover;
+      box-shadow: 0 0 10px $color-btn-primary;
+    }
+
+    &--mobile {
+      width: 10rem;
+      margin-bottom: $space-md;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    @media (min-width: $bp-laptop) {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}
+
+/*Navbar Desktop*/
+.navbar {
+  padding: $space-md $space-xl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: $color-text;
+  font-family: "JetBrains Mono";
+
+  @media (max-width: $bp-laptop) {
+    display: none;
+  }
+
+  @media (max-width: $bp-desktop) {
+    padding: $space-md;
+  }
+
+  /* Menu*/
+  &__menu {
+    padding: $space-sm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $space-xl;
+    border: 2px solid $color-surface;
+    border-radius: $radius-s;
+
+    @media (max-width: $bp-desktop) {
+      gap: $space-md;
+    }
+  }
+
+  &__item {
+    padding: $space-md;
+    font-size: $font-size-sm;
+    border-radius: $radius-s;
+    color: $color-text;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-surface-card;
+      color: $color-text-subtle;
+      font-weight: 900;
+    }
+
+    @media (max-width: $bp-desktop) {
     }
   }
 }
