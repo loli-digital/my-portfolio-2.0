@@ -3,6 +3,7 @@
 .footer {
   padding: 2rem;
   text-align: center;
+  background-color: $color-surface-menu;
   color: $color-text;
   font-family: "JetBrains Mono";
 
@@ -20,7 +21,7 @@
     }
 
     &--typescript {
-      color: #3178c6;
+      color: #398ce5;
     }
 
     &--sass {
