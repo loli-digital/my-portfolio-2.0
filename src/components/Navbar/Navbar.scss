@@ -46,7 +46,6 @@
     position: absolute;
     top: 100%;
     right: 0;
-    z-index: 1;
     padding: $space-md;
     background-color: $color-surface-menu-navbar;
     border-bottom: 2px solid $color-surface;
@@ -105,12 +104,37 @@
     }
   }
 
-  /*Button download CV*/
+  /*CV download button*/
+  &__cv-btn-wrapper {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+
+    &::after,
+    &::before {
+      content: "";
+      inset: -4% -1%;
+      position: absolute;
+      background: $gradient-btn-primary-border;
+      border-radius: $radius-s;
+      z-index: -1;
+      pointer-events: none;
+      animation: spin 5s linear infinite;
+    }
+
+    &::before {
+      filter: blur(10px);
+      opacity: 0.5;
+    }
+  }
+
   &__cv-btn {
+    width: 8.5rem;
     padding: $space-sm;
+    position: relative;
+    z-index: 1;
     display: none;
     border-radius: $radius-s;
-    border: 2px solid $color-btn-primary-border;
     font-size: $font-size-sm;
     font-family: "Inter";
     color: $color-btn-primary-content;
@@ -119,17 +143,15 @@
       rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
       rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    transition:
-      border-color 0.3s ease-in-out,
-      box-shadow 0.3s ease;
+    transition: filter 1.5s ease-in-out;
 
     &:hover {
-      border-color: $color-btn-primary-hover;
-      box-shadow: 0 0 10px $color-btn-primary;
+      filter: contrast(130%);
     }
 
     &--mobile {
       width: 10rem;
+      position: relative;
       margin-bottom: $space-md;
       display: inline-flex;
       justify-content: center;
@@ -141,7 +163,6 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      gap: 0.5rem;
     }
   }
 }
