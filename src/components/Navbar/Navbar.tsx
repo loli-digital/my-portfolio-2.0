@@ -48,14 +48,16 @@ export function Navbar() {
         </ul>
       </nav>
       {/* Botón para descargar CV */}
-      <a
-        href="/cv/CV_Loli_Guerrero_Frontend_Developer_Junior.pdf"
-        download
-        className="header__cv-btn"
-      >
-        <DownloadIcon />
-        Descargar CV
-      </a>
+      <div className="header__cv-btn-wrapper">
+        <a
+          href="/cv/CV_Loli_Guerrero_Frontend_Developer_Junior.pdf"
+          download
+          className="header__cv-btn"
+        >
+          <DownloadIcon />
+          Descargar CV
+        </a>
+      </div>
 
       {/* Botón menú hamburguesa */}
       <button
