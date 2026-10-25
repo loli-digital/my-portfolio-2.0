@@ -97,14 +97,16 @@ export function Navbar() {
             </li>
           </ul>
           {/* Botón para descargar CV */}
-          <a
-            href="/cv/CV_Loli_Guerrero_Frontend_Developer_Junior.pdf"
-            download
-            className="header__cv-btn header__cv-btn--mobile"
-          >
-            <DownloadIcon />
-            Descargar CV
-          </a>
+          <div className="header__cv-btn-wrapper">
+            <a
+              href="/cv/CV_Loli_Guerrero_Frontend_Developer_Junior.pdf"
+              download
+              className="header__cv-btn header__cv-btn--mobile"
+            >
+              <DownloadIcon />
+              Descargar CV
+            </a>
+          </div>
         </div>
       )}
     </header>
