@@ -24,7 +24,8 @@
     }
 
     &-role {
-      padding: $space-sm;
+      margin-left: $space-xs;
+      padding: $space-xs;
       background-color: $color-icon-secondary;
       color: $color-icon-secondary-content;
       font-size: $font-size-xs;
@@ -38,7 +39,7 @@
   /*Navbar Mobile*/
   &__mobile-menu {
     width: 100%;
-    padding: $space-lg $space-md;
+    padding: $space-lg;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,8 +152,6 @@
 
     &--mobile {
       width: 10rem;
-      position: relative;
-      margin-bottom: $space-md;
       display: inline-flex;
       justify-content: center;
       align-items: center;
