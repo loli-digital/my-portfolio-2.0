@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Navbar.scss";
-import DownloadIcon from "@mui/icons-material/Download";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+import { DownloadIcon, MenuIcon, CloseIcon } from "../../icons";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
