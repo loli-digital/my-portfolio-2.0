@@ -1,11 +1,16 @@
-import { Footer, Navbar } from "@/components";
+import { Footer, Navbar, SkillCard } from "@/components";
 import "./styles/main.scss";
 
 function App() {
-  return <>
-    <Navbar />
-    <Footer />
-  </>;
+  return (
+    <>
+      <Navbar />
+      <main>
+        <SkillCard />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
