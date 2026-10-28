@@ -4,7 +4,7 @@ import "./SkillsSection.scss";
 
 export function SkillsSection() {
   return (
-    <section className="section">
+    <section id="habilities" className="section">
       <div className="section__wrapper">
         {/* Efecto pulse */}
         <div className="section__animation">
