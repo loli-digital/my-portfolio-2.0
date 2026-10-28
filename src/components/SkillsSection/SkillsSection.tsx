@@ -4,23 +4,23 @@ import "./SkillsSection.scss";
 
 export function SkillsSection() {
   return (
-    <section id="habilities" className="section">
-      <div className="section__wrapper">
+    <section id="habilities" className="skills">
+      <div className="skills__wrapper">
         {/* Efecto pulse */}
-        <div className="section__animation">
-          <span className="section__animation--bg">
-            <span className="section__animation--circle"></span>
+        <div className="skills__animation">
+          <span className="skills__animation-bg">
+            <span className="skills__animation-circle"></span>
           </span>
-          <span className="section__subtitle">Stack Técnico</span>
+          <span className="skills__subtitle">Stack Técnico</span>
         </div>
-        <h2 className="section__title">Habilidades y Herramientas</h2>
-        <p className="section__description">
+        <h2 className="skills__title">Habilidades y Herramientas</h2>
+        <p className="skills__description">
           Tecnologías, entornos de desarrollo y competencias interpersonales que
           aplico para construir productos digitales sólidos
         </p>
       </div>
 
-      <div className="articles__wrapper">
+      <div className="skills__articles-wrapper">
         {skillsCards.map((card) => (
           <SkillCard
             key={card?.id}
