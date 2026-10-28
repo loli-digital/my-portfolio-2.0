@@ -1,0 +1,15 @@
+export { default as DownloadIcon } from "@mui/icons-material/Download";
+export { default as MenuIcon } from "@mui/icons-material/Menu";
+export { default as CloseIcon } from "@mui/icons-material/Close";
+export { default as TerminalIcon } from '@mui/icons-material/Terminal';
+export { default as CodeIcon } from "@mui/icons-material/Code";
+export { default as FlashOnIcon } from '@mui/icons-material/FlashOn';
+export { default as BugReportIcon } from '@mui/icons-material/BugReport';
+export { default as PaletteIcon } from '@mui/icons-material/Palette';
+export { default as ViewInArIcon } from '@mui/icons-material/ViewInAr';
+export { default as QuestionAnswerIcon } from '@mui/icons-material/QuestionAnswer';
+export { default as WorkspacesIcon } from '@mui/icons-material/Workspaces';
+export { default as EventAvailableIcon } from '@mui/icons-material/EventAvailable';
+export { default as SavedSearchIcon } from '@mui/icons-material/SavedSearch';
+export { default as FavoriteIcon } from '@mui/icons-material/Favorite';
+export { default as PsychologyIcon } from '@mui/icons-material/Psychology';
