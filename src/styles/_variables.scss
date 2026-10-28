@@ -29,28 +29,6 @@ $color-btn-primary-hover: #d4bbff;
 $gradient-btn-primary: linear-gradient(135deg, #ff4edb, #220b4d);
 $gradient-btn-primary-hover: linear-gradient(135deg, #01dbe9, #ff4edb);
 
-/*Animation border button*/
-@property --angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-$gradient-btn-primary-border: conic-gradient(
-  from var(--angle),
-  #01dbe9,
-  #ffade4,
-  #01dbe9
-);
-
-@keyframes spin {
-  0% {
-    --angle: 0deg;
-  }
-  100% {
-    --angle: 360deg;
-  }
-}
-
 // Typography
 $font-primary: "Inter", sans-serif;
 
@@ -81,14 +59,37 @@ $bp-tablet: 768px;
 $bp-laptop: 1024px;
 $bp-desktop: 1280px;
 
+// Animation border button
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+$gradient-btn-primary-border: conic-gradient(
+  from var(--angle),
+  #01dbe9,
+  #ffade4,
+  #01dbe9
+);
+
+@keyframes spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
 // Animation pulse
-.section__animation {
+.skills__animation,
+.contact__animation {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: $space-xs;
 
-  &--bg {
+  &-bg {
     width: 1rem;
     height: 1rem;
     position: relative;
@@ -101,7 +102,6 @@ $bp-desktop: 1280px;
       content: "";
       position: absolute;
       inset: 0;
-      background-color: $color-icon-tertiary;
       border-radius: inherit;
       animation: pulse 2s ease-in-out 2s infinite normal forwards;
     }
@@ -116,12 +116,35 @@ $bp-desktop: 1280px;
     }
   }
 
-  &--circle {
+  &-circle {
     width: 0.5rem;
     height: 0.5rem;
     position: relative;
-    background-color: $color-icon-tertiary-content;
     border-radius: 100%;
     z-index: 1;
+  }
+}
+
+.skills__animation {
+  &-bg {
+    &::before {
+      background-color: $color-icon-tertiary;
+    }
+  }
+
+  &-circle {
+    background-color: $color-icon-tertiary-content;
+  }
+}
+
+.contact__animation {
+  &-bg {
+    &::before {
+      background-color: $color-icon-primary;
+    }
+  }
+
+  &-circle {
+    background-color: $color-icon-primary-content;
   }
 }
