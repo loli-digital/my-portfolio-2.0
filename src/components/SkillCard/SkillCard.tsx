@@ -23,19 +23,19 @@ export const SkillCard = ({ title, items, finalSentence }: SkillCardProps) => {
   const Icon = title.icon;
 
   return (
-    <div className="article__wrapper">
-      <article className="article">
+    <div className="skill-card__wrapper">
+      <article className="skill-card">
         {/* Title and icon */}
 
-        <h3 className="article__title">
-          <span className={`title__icon title__icon--${title.id}`}>
+        <h3 className="skill-card__title">
+          <span className={`skill-card__icon skill-card__icon--${title.id}`}>
             <Icon />
           </span>{" "}
           {title.title}
         </h3>
 
         {/* Cards */}
-        <div className={`article__items article__items--${title.id}`}>
+        <div className={`skill-card__items skill-card__items--${title.id}`}>
           {items.map((item) => {
             if (title.id === 1) {
               return (
@@ -80,7 +80,7 @@ export const SkillCard = ({ title, items, finalSentence }: SkillCardProps) => {
         </div>
 
         {/* Final Sentence */}
-        <p className="article__final-sentence">{finalSentence}</p>
+        <p className="skill-card__final-sentence">{finalSentence}</p>
       </article>
     </div>
   );
