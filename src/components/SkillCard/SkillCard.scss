@@ -1,0 +1,291 @@
+@use "../../styles/variables" as *;
+
+.article__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.article {
+  width: 17.5rem;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $space-md;
+  padding: $space-md;
+  background-color: $color-surface;
+  border-radius: $radius-s;
+
+  @media (min-width: $bp-mobile-xl) {
+    width: 25rem;
+    height: 28rem;
+    padding: $space-lg;
+  }
+
+  @media (min-width: $bp-laptop) {
+    width: 20rem;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 25rem;
+  }
+
+  &__title {
+    padding-bottom: $space-sm;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: $space-sm;
+    font-size: $font-size-lg;
+    color: $color-text-heading;
+    border-bottom: 1px solid $color-border;
+
+    .title__icon {
+      display: flex;
+      padding: $space-xs;
+      border-radius: $radius-s;
+
+      &--1 {
+        background-color: $color-icon-primary;
+        color: $color-icon-primary-content;
+      }
+
+      &--2 {
+        background-color: $color-icon-secondary;
+        color: $color-icon-secondary-content;
+      }
+
+      &--3 {
+        background-color: $color-icon-tertiary;
+        color: $color-icon-tertiary-content;
+      }
+    }
+  }
+
+  /*Display cards*/
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+
+    &--2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $space-sm;
+
+      @media (min-width: $bp-mobile-xl) {
+        gap: $space-md;
+      }
+
+      @media (min-width: $bp-laptop) {
+        gap: $space-sm;
+      }
+
+      @media (min-width: $bp-desktop) {
+        gap: $space-md;
+      }
+    }
+  }
+
+  /*Tech Card*/
+  .tech {
+    padding: $space-xs;
+    background-color: $color-surface-card;
+    font-size: $font-size-base;
+    border-radius: $radius-s;
+
+    &__title {
+      margin-left: $space-sm;
+      margin-right: $space-xs;
+      font-family: "JetBrains Mono";
+      font-size: $font-size-lg;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &--1 {
+        color: #e34c26;
+      }
+
+      &--2 {
+        color: #663399;
+      }
+
+      &--3 {
+        color: #f7df1e;
+      }
+
+      &--4 {
+        text-transform: none;
+        color: #61dbfb;
+      }
+
+      &--5 {
+        color: #06b6d4;
+      }
+
+      &--6 {
+        color: #ffa611;
+      }
+    }
+
+    &__subtitle {
+      font-size: $font-size-sm;
+      color: $color-text-heading;
+    }
+  }
+
+  /*Tool Card*/
+  .tool-card {
+    width: 7.5rem;
+    height: 6rem;
+    padding: $space-xs;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-surface-card;
+    border-radius: $radius-s;
+
+    @media (min-width: $bp-mobile-xl) {
+      width: 10rem;
+      height: 5.5rem;
+    }
+
+    @media (min-width: $bp-laptop) {
+      width: 7.5rem;
+    }
+
+    @media (min-width: $bp-desktop) {
+      width: 10rem;
+      height: 5.5rem;
+    }
+
+    &__icon {
+      &--1 {
+        color: $color-icon-secondary-content;
+      }
+
+      &--2 {
+        color: $color-text-subtle;
+      }
+
+      &--3 {
+        color: $color-icon-tertiary-content;
+      }
+
+      &--4 {
+        color: $color-icon-secondary-content;
+      }
+
+      &--5 {
+        color: $color-text-subtle;
+      }
+
+      &--6 {
+        color: $color-icon-tertiary-content;
+      }
+    }
+
+    &__title {
+      font-family: "Inter";
+      font-size: $font-size-xs;
+      color: $color-text-heading;
+
+      @media (min-width: $bp-mobile-xl) {
+        font-size: $font-size-sm;
+      }
+
+      @media (min-width: $bp-laptop) {
+        font-size: $font-size-xs;
+      }
+
+      @media (min-width: $bp-desktop) {
+        font-size: $font-size-sm;
+      }
+    }
+
+    &__subtitle {
+      text-align: center;
+      color: $color-text-muted;
+      font-family: "JetBrains Mono";
+      font-size: $font-size-xxs;
+    }
+  }
+
+  /*Soft Skills Card*/
+  .soft-skill-card {
+    height: 3.5rem;
+    padding: $space-xs;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: $space-sm;
+    background-color: $color-surface-card;
+    border-radius: $radius-s;
+
+    @media (min-width: $bp-mobile-xl) {
+      height: 3rem;
+    }
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: $space-sm;
+
+      &--1 {
+        color: $color-text-subtle;
+      }
+
+      &--2 {
+        color: $color-icon-tertiary-content;
+      }
+
+      &--3 {
+        color: $color-icon-secondary-content;
+      }
+
+      &--4 {
+        color: $color-text-subtle;
+      }
+
+      &--5 {
+        color: $color-icon-tertiary-content;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      font-family: "Inter";
+
+      &--title {
+        font-size: $font-size-sm;
+        color: $color-text-heading;
+      }
+
+      &--subtitle {
+        color: $color-text;
+        font-size: $font-size-xxs;
+      }
+    }
+  }
+
+  /*Final Sentence*/
+
+  &__final-sentence {
+    color: $color-text-muted;
+    font-family: "JetBrains Mono";
+    font-size: $font-size-xxs;
+
+    &:before {
+      content: "*";
+      margin-right: $space-xs;
+    }
+  }
+}
