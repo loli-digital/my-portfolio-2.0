@@ -5,6 +5,10 @@ import "./ContactSection.scss";
 export function ContactSection() {
   return (
     <section id="contact" className="contact">
+      {/* Decorative Rings */}
+      <div className="contact__decorative contact__decorative--left"></div>
+      <div className="contact__decorative contact__decorative--right"></div>
+
       {/* Text */}
       <div className="contact__text">
         {/* Efecto pulse */}
