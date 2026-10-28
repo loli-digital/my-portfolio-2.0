@@ -15,12 +15,14 @@ export default function SoftSkillLayout({
 }: SoftSkillsLayoutProps) {
   return (
     <div className="soft-skill-card">
-      <div className="soft-skill-card__icon">
-        <span className={`soft-skill-card__icon--${id}`}>{Icon && <Icon />}</span>
+      <div className="soft-skill-card__icon-wrapper">
+        <span className={`soft-skill-card__icon soft-skill-card__icon--${id}`}>
+          {Icon && <Icon />}
+        </span>
       </div>
-      <div className="soft-skill-card__text">
-        <span className="soft-skill-card__text--title">{title}</span>{" "}
-        <span className="soft-skill-card__text--subtitle">{subtitle}</span>
+      <div className="soft-skill-card__content">
+        <span className="soft-skill-card__title">{title}</span>{" "}
+        <span className="soft-skill-card__subtitle">{subtitle}</span>
       </div>
     </div>
   );
