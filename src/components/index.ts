@@ -4,3 +4,6 @@ export { Footer } from "./Footer/Footer";
 export { ProjectCard } from "./ProjectCard/ProjectCard";
 export { SkillsSection } from "./SkillsSection/SkillsSection";
 export { SkillCard } from "./SkillCard/SkillCard";
+export { AboutMeSection } from "./AboutMeSection/AboutMeSection";
+export { ContactSection } from "./ContactSection/ContactSection";
+export { ContactLink } from "./ContactLink/ContactLink";
