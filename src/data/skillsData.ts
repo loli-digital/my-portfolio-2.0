@@ -3,14 +3,14 @@ import {
   CodeIcon,
   TerminalIcon,
   FlashOnIcon,
-  BugReportIcon,
-  PaletteIcon,
+  BugReportOutlinedIcon,
+  PaletteOutlinedIcon,
   ViewInArIcon,
-  QuestionAnswerIcon,
-  WorkspacesIcon,
+  QuestionAnswerOutlinedIcon,
+  WorkspacesOutlinedIcon,
   EventAvailableIcon,
   SavedSearchIcon,
-  FavoriteIcon,
+  FavoriteBorderOutlinedIcon,
   PsychologyIcon,
 } from "../icons";
 
@@ -109,13 +109,13 @@ export const tools: Tool[] = [
   },
   {
     id: 4,
-    icon: BugReportIcon,
+    icon: BugReportOutlinedIcon,
     title: "Chrome DevTools",
     subtitle: "Inspección & Debug",
   },
   {
     id: 5,
-    icon: PaletteIcon,
+    icon: PaletteOutlinedIcon,
     title: "Figma",
     subtitle: "Implementación UI",
   },
@@ -138,13 +138,13 @@ export type SoftSkill = {
 export const softSkills: SoftSkill[] = [
   {
     id: 1,
-    icon: QuestionAnswerIcon,
+    icon: QuestionAnswerOutlinedIcon,
     title: "Comunicación Efectiva",
     subtitle: "Comunicación clara y estructurada",
   },
   {
     id: 2,
-    icon: WorkspacesIcon,
+    icon: WorkspacesOutlinedIcon,
     title: "Trabajo en Equipo",
     subtitle: "Colaboración remota fluida",
   },
@@ -162,7 +162,7 @@ export const softSkills: SoftSkill[] = [
   },
   {
     id: 5,
-    icon: FavoriteIcon,
+    icon: FavoriteBorderOutlinedIcon,
     title: "Empatía y Enfoque Usuario/a",
     subtitle: "Experiencia en integración social",
   },
