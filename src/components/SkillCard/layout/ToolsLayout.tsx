@@ -15,7 +15,9 @@ export default function ToolsLayout({
 }: ToolsLayoutProps) {
   return (
     <div className="tool-card">
-      <span className={`tool-card__icon--${id}`}>{Icon && <Icon />}</span>
+      <span className={`tool-card__icon tool-card__icon--${id}`}>
+        {Icon && <Icon />}
+      </span>
       <span className="tool-card__title">{title}</span>{" "}
       <span className="tool-card__subtitle">{subtitle}</span>
     </div>
