@@ -8,7 +8,8 @@
   align-items: center;
   text-align: center;
   background-color: $color-surface-menu-navbar;
-  position: relative;
+  position: fixed;
+  z-index: 2;
 
   @media (min-width: $bp-desktop) {
     padding: $space-md $space-xl;
@@ -48,7 +49,7 @@
     top: 100%;
     right: 0;
     padding: $space-md;
-    background-color: $color-surface-menu-navbar;
+    background-color: $color-surface-menu-navbar-mobile;
     border-bottom: 2px solid $color-surface;
     opacity: 0;
     transform: translateY(-10px);
@@ -169,15 +170,15 @@
 /*Navbar Desktop*/
 .navbar {
   padding: $space-md $space-xl;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
   text-align: center;
   color: $color-text;
   font-family: "JetBrains Mono";
 
-  @media (max-width: $bp-laptop) {
-    display: none;
+  @media (min-width: $bp-laptop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   @media (max-width: $bp-desktop) {
