@@ -13,3 +13,7 @@ export { default as EventAvailableIcon } from '@mui/icons-material/EventAvailabl
 export { default as SavedSearchIcon } from '@mui/icons-material/SavedSearch';
 export { default as FavoriteIcon } from '@mui/icons-material/Favorite';
 export { default as PsychologyIcon } from '@mui/icons-material/Psychology';
+export { default as EmailIcon } from '@mui/icons-material/Favorite';
+export { default as WorkIcon } from '@mui/icons-material/Psychology';
+export { default as SendIcon } from '@mui/icons-material/Psychology';
+export { default as OpenInNewIcon } from '@mui/icons-material/Psychology';
