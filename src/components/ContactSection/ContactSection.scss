@@ -1,0 +1,109 @@
+@use "../../styles/variables" as *;
+
+.contact {
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  margin: $space-lg;
+  padding: $space-md;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  position: relative;
+  overflow: hidden;
+  border-radius: $radius-md;
+  background: $color-surface-card;
+
+  @media (min-width: $bp-mobile-xl) {
+    padding: $space-lg;
+  }
+
+  @media (min-width: $bp-laptop) {
+    width: 80%;
+    height: 20rem;
+    margin: $space-xl $space-lg;
+    flex-direction: row;
+  }
+
+  @media (min-width: $bp-desktop) {
+    gap: $space-xl;
+  }
+
+  .contact__decorative {
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    border-radius: 100%;
+    filter: blur(6.4rem);
+    pointer-events: none;
+
+    &--left {
+      top: -4rem;
+      right: -4rem;
+      background: $color-icon-primary;
+
+      @media (min-width: $bp-laptop) {
+        width: 20rem;
+        height: 20rem;
+      }
+    }
+
+    &--right {
+      bottom: -4rem;
+      left: -4rem;
+      background: rgba(34, 11, 77, 0.5);
+
+      @media (min-width: $bp-laptop) {
+        width: 20rem;
+        height: 20rem;
+      }
+    }
+  }
+
+  .contact__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: $space-sm;
+    position: relative;
+
+    @media (min-width: $bp-laptop) {
+      width: 55%;
+    }
+  }
+
+  .contact__animation {
+    &-subtitle {
+      font-size: $font-size-xs;
+      font-family: "JetBrains Mono";
+      font-weight: 600;
+      letter-spacing: 0.08rem;
+      color: $color-icon-primary-content;
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    color: $color-text-heading;
+  }
+
+  &__description {
+    font-size: $font-size-base;
+
+    @media (min-width: $bp-desktop) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: $space-sm;
+    position: relative;
+  }
+}
