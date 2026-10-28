@@ -1,0 +1,69 @@
+@use "../../styles/variables" as *;
+
+.contact-link {
+  width: 100%;
+  padding: $space-md;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: $space-md;
+  background-color: $color-bg;
+  border-radius: $radius-md;
+
+  &__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: $space-md;
+  }
+
+  &__icon {
+    padding: $space-sm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $radius-s;
+
+    &--1 {
+      background-color: $color-icon-primary;
+      color: $color-icon-primary-content;
+    }
+
+    &--2 {
+      background-color: $color-icon-secondary;
+      color: $color-icon-secondary-content;
+    }
+
+    &--3 {
+      background-color: $color-icon-tertiary;
+      color: $color-icon-tertiary-content;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  &__platform {
+    font-size: $font-size-xs;
+    font-family: "JetBrains Mono";
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+    color: $color-text-muted;
+    text-transform: uppercase;
+  }
+
+  &__address {
+    font-size: $font-size-xs;
+    color: $color-text-heading;
+
+    @media (min-width: $bp-mobile-xl) {
+      font-size: $font-size-base;
+    }
+  }
+}
