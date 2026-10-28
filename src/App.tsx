@@ -1,4 +1,4 @@
-import { Footer, Navbar, SkillCard } from "@/components";
+import { Footer, Navbar, SkillsSection } from "@/components";
 import "./styles/main.scss";
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <>
       <Navbar />
       <main>
-        <SkillCard />
+        <SkillsSection />
       </main>
       <Footer />
     </>
