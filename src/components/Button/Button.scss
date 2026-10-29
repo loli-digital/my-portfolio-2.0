@@ -1,0 +1,85 @@
+@use "../../styles/variables" as *;
+
+.button__cv-wrapper {
+  width: 9rem;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+
+  &::after,
+  &::before {
+    content: "";
+    inset: -4% -1%;
+    position: absolute;
+    background: $gradient-btn-primary-border;
+    border-radius: $radius-s;
+    z-index: -1;
+    pointer-events: none;
+    animation: spin 5s linear infinite;
+  }
+
+  &::before {
+    filter: blur(10px);
+    opacity: 0.5;
+  }
+}
+
+.button__cv {
+  width: 8.5rem;
+  padding: $space-sm;
+  position: relative;
+  z-index: 1;
+  display: none;
+  border-radius: $radius-s;
+  font-size: $font-size-sm;
+  font-family: "Inter";
+  color: $color-btn-primary-content;
+  background: $gradient-btn-primary;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transition: filter 1.5s ease-in-out;
+
+  &:hover {
+    filter: contrast(130%);
+  }
+
+  &--mobile {
+    width: 10rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: $bp-laptop) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.button__cv--navbar {
+    display: none;
+
+    @media(min-width: $bp-laptop){
+        display: inline-flex;
+    }
+}
+
+// Animation border button
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
