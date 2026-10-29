@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Navbar.scss";
-import { DownloadIcon, MenuIcon, CloseIcon } from "../../icons";
+import { Button } from "@/components";
+import { MenuIcon, CloseIcon } from "../../icons";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,15 +47,8 @@ export function Navbar() {
         </ul>
       </nav>
       {/* Botón para descargar CV */}
-      <div className="header__cv-btn-wrapper">
-        <a
-          href="/cv/CV_Loli_Guerrero_Frontend_Developer_Junior.pdf"
-          download
-          className="header__cv-btn"
-        >
-          <DownloadIcon />
-          Descargar CV
-        </a>
+      <div className="button__cv--navbar">
+        <Button />
       </div>
 
       {/* Botón menú hamburguesa */}
@@ -95,16 +89,7 @@ export function Navbar() {
             </li>
           </ul>
           {/* Botón para descargar CV */}
-          <div className="header__cv-btn-wrapper">
-            <a
-              href="/cv/CV_Loli_Guerrero_Frontend_Developer_Junior.pdf"
-              download
-              className="header__cv-btn header__cv-btn--mobile"
-            >
-              <DownloadIcon />
-              Descargar CV
-            </a>
-          </div>
+          <Button />
         </div>
       )}
     </header>
