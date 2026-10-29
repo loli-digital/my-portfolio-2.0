@@ -1,4 +1,11 @@
-import { Footer, Navbar, SkillsSection, AboutMeSection, ContactSection } from "@/components";
+import {
+  Footer,
+  Navbar,
+  HeroSection,
+  SkillsSection,
+  AboutMeSection,
+  ContactSection,
+} from "@/components";
 import "./styles/main.scss";
 
 function App() {
@@ -6,8 +13,9 @@ function App() {
     <>
       <Navbar />
       <main>
-        <AboutMeSection />
+        <HeroSection />
         <SkillsSection />
+        <AboutMeSection />
         <ContactSection />
       </main>
       <Footer />
