@@ -1,6 +1,30 @@
 @use "../../styles/variables" as *;
 
 .about-me {
-    width: 100%;    
-    height: 10rem;
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  margin: $space-md;
+
+  &__title {
+    margin-bottom: $space-md;
+  }
+
+  &__description {
+    margin-top: $space-md;
+    font-size: $font-size-base;
+
+    @media (min-width: $bp-desktop) {
+      font-size: $font-size-lg;
+    }
+
+    &--role {
+      font-family: "JetBrains Mono";
+      font-weight: 600;
+      color: $color-text-heading;
+      text-shadow:
+        0 0 5px $color-icon-tertiary-content,
+        0 0 10px $color-icon-tertiary-content;
+    }
+  }
 }
