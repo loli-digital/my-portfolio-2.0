@@ -28,6 +28,12 @@ $color-btn-primary-hover: #d4bbff;
 // Gradient
 $gradient-btn-primary: linear-gradient(135deg, #ff4edb, #220b4d);
 $gradient-btn-primary-hover: linear-gradient(135deg, #01dbe9, #ff4edb);
+$gradient-btn-primary-border: conic-gradient(
+  from var(--angle),
+  #01dbe9,
+  #ffade4,
+  #01dbe9
+);
 
 // Typography
 $font-primary: "Inter", sans-serif;
@@ -58,28 +64,6 @@ $bp-mobile-xl: 640px;
 $bp-tablet: 768px;
 $bp-laptop: 1024px;
 $bp-desktop: 1280px;
-
-// Animation border button
-@property --angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-$gradient-btn-primary-border: conic-gradient(
-  from var(--angle),
-  #01dbe9,
-  #ffade4,
-  #01dbe9
-);
-
-@keyframes spin {
-  0% {
-    --angle: 0deg;
-  }
-  100% {
-    --angle: 360deg;
-  }
-}
 
 // Animation pulse
 .skills__animation,
