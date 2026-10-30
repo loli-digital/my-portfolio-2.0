@@ -22,7 +22,7 @@ main {
   align-items: center;
   gap: $space-lg;
 
-  @media(min-width: $bp-laptop){
+  @media (min-width: $bp-laptop) {
     gap: $space-xl;
   }
 }
@@ -32,6 +32,11 @@ h2,
 h3 {
   line-height: 1.15;
   letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: $font-size-xl;
+  color: $color-text-heading;
 }
 
 a {
