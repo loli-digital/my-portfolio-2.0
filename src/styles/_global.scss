@@ -20,7 +20,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: $space-md;
+  gap: $space-lg;
+
+  @media(min-width: $bp-laptop){
+    gap: $space-xl;
+  }
 }
 
 h1,
